@@ -10,5 +10,5 @@ import Foundation
 struct CountryDetailResponse: Codable {
     let country: String?
     let countryInfo: CountryInfo?
-    let cases, todayCases, deaths, todayDeaths: Int?
+    let cases, todayCases, deaths, recovered: Int?
 }

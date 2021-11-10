@@ -22,10 +22,10 @@ final class CountryDetailPresenter: CountryDetailPresentationLogic {
         let cases = response.response.cases
         let todayCases = response.response.todayCases
         let deaths = response.response.deaths
-        let todayDeaths = response.response.todayDeaths
+        let recovered = response.response.recovered
         let countryInfo = response.response.countryInfo
         
-        viewController?.displayCountryDetail(viewModel: CountryDetail.Fetch.ViewModel(country: country, cases: cases, todayCases: todayCases, deaths: deaths, todayDeaths: todayDeaths, countryInfo: countryInfo))
+        viewController?.displayCountryDetail(viewModel: CountryDetail.Fetch.ViewModel(country: country, cases: cases, todayCases: todayCases, deaths: deaths, recovered: recovered, countryInfo: countryInfo))
     }
     
     func presentError() {

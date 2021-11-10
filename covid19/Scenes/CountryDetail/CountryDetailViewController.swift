@@ -85,7 +85,7 @@ extension CountryDetailViewController: CountryDetailDisplayLogic {
         items.append((key: "Cases", value: viewModel.cases.stringValue))
         items.append((key: "Today Cases", value: viewModel.todayCases.stringValue))
         items.append((key: "Deaths", value: viewModel.deaths.stringValue))
-        items.append((key: "Today Deaths", value: viewModel.todayDeaths.stringValue))
+        items.append((key: "Recovered", value: viewModel.recovered.stringValue))
         setMap(lat: (viewModel.countryInfo?.lat).doubleValue, long: (viewModel.countryInfo?.long).doubleValue)
         tableView.reloadData()
     }

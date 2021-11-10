@@ -8,7 +8,6 @@
 import Foundation
 
 struct CountryListResponse: Codable {
-    let updated: Int?
     let country: String?
     let countryInfo: CountryInfo?
     let cases, todayCases, deaths, todayDeaths: Int?
@@ -22,8 +21,4 @@ struct CountryInfo: Codable {
     let lat, long: Double?
     let flag: String?
 
-    enum CodingKeys: String, CodingKey {
-        case id = "_id"
-        case iso2, iso3, lat, long, flag
-    }
 }
