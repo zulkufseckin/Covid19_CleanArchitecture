@@ -24,8 +24,9 @@ final class CountryListPresenter: CountryListPresentationLogic {
         var countryList = [CountryTableViewCell.ViewModel]()
         
         for item in response {
-            guard let title = item.country, let flag = item.countryInfo?.flag else { return [CountryTableViewCell.ViewModel]() }
-            countryList.append(CountryTableViewCell.ViewModel(name: title, icon: flag))
+            if let countryName = item.country, let flag = item.countryInfo?.flag {
+                countryList.append(CountryTableViewCell.ViewModel(name: countryName, icon: flag))
+            }
         }
         return countryList
     }
